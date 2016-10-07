@@ -1,0 +1,52 @@
+#!/usr/bin/env python 
+
+#The above makes it possible to run as "./lab1.py" (after you have runned "chmod +x lib.py")
+
+import os
+#os.getcwd()
+#os.chdir("/home/adam/Documents/NUS/Modules/CS4243")
+#os.listdir(".")
+
+import numpy as np
+import numpy.linalg as la
+
+A = np.matrix(np.random.rand(3,3)
+invA = la.inv(A)
+K = np.cross(I, J)
+detA = la.det(A)
+eigenvalues, eigvectors = la.eig(A)
+(use np.argsort(eigvalues) to sort) 
+U, S, VT = la.svd(A)
+rankA = la.matrix_rank(A)
+
+
+2D arrays and matrices. Matrices can do matrix multiplications, arrays only do value by value addition
+
+np.array([1, 2, 3]) #1D
+np.array([[1, 2], [3, 4]]) #2D
+np.zeros()
+np.matrix([[1, 2], [3, 4]])
+np.empty([])
+np.eye()
+np.identity()
+np.ones([])
+np.zeros([])
+np.random.rand()
+
+#Convert array into matrix
+a = np.identity(3)
+b = np.matrix(a)
+
+## Linear equations
+
+alt 1: x = la.inv(A) * b
+alt 2: x = la.solve(A, b)
+
+# Solve for least-square error solution (For Over-determined LE)
+# e.g. (MT*M)⁻¹*(MT*M)*a = a = (MT*M)⁻¹*MT*b
+
+a, e, r, s = la.lstsq(M, b)
+# a=least-squared solution, e=residue error, r=rank, s=singular values
+
+#Execute file: execfile("lineq-1.py")
+
