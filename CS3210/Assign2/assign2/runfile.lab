@@ -1,0 +1,4 @@
+
+mpirun -machinefile machinefile.lab -rankfile rankfile.lab -np 16 ./SETL_par ./data/random3000.w 100 ./data/glider5.p
+
+

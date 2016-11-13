@@ -158,8 +158,7 @@ void work()
 	before = wall_clock_time();
 	mm(a, b, result);
 	after = wall_clock_time();
-    fprintf(stderr, "Matrix multiplication took %1.2f seconds\n", 
-        ((float)(after - before))/1000000000);
+        fprintf(stderr, "Matrix multiplication took %1.2f seconds\n", ((float)(after - before))/1000000000);
 
 	// Print the result matrix
 	// print_matrix(result);

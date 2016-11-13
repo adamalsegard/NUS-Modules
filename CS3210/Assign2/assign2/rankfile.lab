@@ -1,0 +1,16 @@
+rank 0=soctf-pdc-001 slot=0:0
+rank 1=soctf-pdc-001 slot=0:1
+rank 2=soctf-pdc-001 slot=0:2
+rank 3=soctf-pdc-001 slot=0:3
+rank 4=soctf-pdc-001 slot=0:0
+rank 5=jetson01 slot=0:0
+rank 6=soctf-pdc-008 slot=0:0
+rank 7=soctf-pdc-001 slot=0:1
+rank 8=jetson01 slot=0:0
+rank 9=soctf-pdc-008 slot=0:1
+rank 10=soctf-pdc-001 slot=0:2
+rank 11=jetson01 slot=0:0
+rank 12=soctf-pdc-008 slot=0:2
+rank 13=soctf-pdc-001 slot=0:3
+rank 14=jetson01 slot=0:0
+rank 15=soctf-pdc-008 slot=0:3

@@ -1,0 +1,4 @@
+3
+OXO
+OOX
+XXX

@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -q normal
+#PBS -l select=2:ncpus=24:mpiprocs=48
+
+cd ${PBS_O_WORKDIR}
+
+module load intelcc
+module load intelmpi
+
+mpirun -np 48 ./SETL_par ./data/random3000.w 100 ./data/glider5.p

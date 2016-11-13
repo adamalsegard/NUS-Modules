@@ -1,0 +1,3 @@
+
+mpicc ./SETL_par.c -o SETL_par
+

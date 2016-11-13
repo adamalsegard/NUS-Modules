@@ -1,0 +1,5 @@
+#!/bin/bash
+module load intelcc
+module load intelmpi
+
+mpicc ./SETL_par.c -o SETL_par
