@@ -1,0 +1,351 @@
+#Comment starts with a "#" in the first column.
+#Each line cannot be longer than 1024 characters.
+
+#=== VERTICES ===
+
+#Number of vertices.
+72
+
+#Each line must provide the x, y, z coordinates of a vertex.
+#The first vertex has index 0.
+
+#floor (0-3)
+1500.0 0.0 0.0
+0.0 0.0 0.0
+0.0 0.0 2000.0
+1500.0 0.0 2000.0
+
+#ceiling (4-7)
+1500.0 750.0 0.0
+0.0 750.0 0.0
+0.0 750.0 2000.0
+1500.0 750.0 2000.0
+
+#light1 (8-11)
+0.0 100.0 1500.0
+0.0 100.0 1700.0
+0.0 650.0 1700.0
+0.0 650.0 1500.0
+
+#light2 (12-15)
+0.0 100.0 1100.0
+0.0 100.0 1300.0
+0.0 650.0 1300.0
+0.0 650.0 1100.0
+
+#light3 (16-19)
+0.0 100.0 700.0
+0.0 100.0 900.0
+0.0 650.0 900.0
+0.0 650.0 700.0
+
+#light4 (20-23)
+0.0 100.0 300.0
+0.0 100.0 500.0
+0.0 650.0 500.0
+0.0 650.0 300.0
+
+#pillar1_top (24-27)
+600.0 750.0 1300.0
+400.0 750.0 1300.0
+400.0 750.0 1500.0
+600.0 750.0 1500.0
+
+#pillar1_bottom (28-31)
+600.0 0.0 1300.0
+400.0 0.0 1300.0
+400.0 0.0 1500.0
+600.0 0.0 1500.0
+
+#pillar2_top (32-35)
+1100.0 750.0 1300.0
+900.0 750.0 1300.0
+900.0 750.0 1500.0
+1100.0 750.0 1500.0
+
+#pillar2_bottom (36-39)
+1100.0 0.0 1300.0
+900.0 0.0 1300.0
+900.0 0.0 1500.0
+1100.0 0.0 1500.0
+
+#pillar3_top (40-43)
+600.0 750.0 900.0
+400.0 750.0 900.0
+400.0 750.0 1100.0
+600.0 750.0 1100.0
+
+#pillar3_bottom (44-47)
+600.0 0.0 900.0
+400.0 0.0 900.0
+400.0 0.0 1100.0
+600.0 0.0 1100.0
+
+#pillar4_top (48-51)
+1100.0 750.0 900.0
+900.0 750.0 900.0
+900.0 750.0 1100.0
+1100.0 750.0 1100.0
+
+#pillar4_bottom (52-55)
+1100.0 0.0 900.0
+900.0 0.0 900.0
+900.0 0.0 1100.0
+1100.0 0.0 1100.0
+
+#pillar5_top (56-59)
+600.0 750.0 500.0
+400.0 750.0 500.0
+400.0 750.0 700.0
+600.0 750.0 700.0
+
+#pillar5_bottom (60-63)
+600.0 0.0 500.0
+400.0 0.0 500.0
+400.0 0.0 700.0
+600.0 0.0 700.0
+
+#pillar6_top (64-67)
+1100.0 750.0 500.0
+900.0 750.0 500.0
+900.0 750.0 700.0
+1100.0 750.0 700.0
+
+#pillar6_bottom (68-71)
+1100.0 0.0 500.0
+900.0 0.0 500.0
+900.0 0.0 700.0
+1100.0 0.0 700.0
+
+
+#=== MATERIALS ===
+
+#Number of materials.
+5
+
+#Each material is specified by two lines.
+#First line is the RGB reflectivity.
+#Second line is the RGB emission.
+#The first material has index 0.
+
+
+#light
+0.68 0.68 0.68
+50.0 50.0 50.0
+
+#white
+0.55 0.55 0.55
+0.0 0.0 0.0
+
+#red
+0.6 0.0 0.0
+0.0 0.0 0.0
+
+#green
+0.0 0.6 0.0
+0.0 0.0 0.0
+
+#blue
+0.0 0.0 0.6
+0.0 0.0 0.0
+
+
+#=== SURFACES ===
+
+#Number of surfaces.
+33
+
+#Each surface is made of one or more quadrilateral patches.
+#For each surface, the first integer is the material index,
+#the second integer is the number of quadrilateral patches,
+#then followed by lines where each corresponds to a 
+#quadrilateral patch. Each line has 4 integers, which are
+#indices to the above vertices. The vertices must be listed
+#in counter-clockwise direction when viewed from its frontside.
+
+
+#floor (white)
+1
+1
+0 1 2 3
+
+#ceiling (white)
+1
+1
+4 7 6 5
+
+#light1 (light)
+0
+1
+8 11 10 9
+
+#light2 (light)
+0
+1
+12 15 14 13
+
+#light3 (light)
+0
+1
+16 19 18 17
+
+#light4 (light)
+0
+1
+20 23 22 21
+
+#back_wall (white)
+1
+1
+0 4 5 1
+
+#right_wall (light)
+1
+1
+3 7 4 0
+
+#front_wall (white)
+1
+1
+3 2 6 7
+
+# Too computationally heavy for me to run atm unfurtunately
+#left_wall (blue)
+#4
+#7
+#2 9 10 6
+#6 10 23 5
+#1 5 23 20
+#1 20 9 2
+#13 14 11 8
+#17 18 15 12
+#21 22 19 16
+
+# PILLAR 1
+#pillar1_back (red)
+2
+1
+29 25 24 28
+
+#pillar1_left (red)
+2
+1
+30 26 25 29
+
+#pillar1_front (red)
+2
+1
+31 27 26 30
+
+#pillar1_right (red)
+2
+1
+28 24 27 31
+
+# PILLAR 2
+#pillar2_back (red)
+2
+1
+37 33 32 36
+
+#pillar2_left (red)
+2
+1
+38 34 33 37
+
+#pillar2_front (red)
+2
+1
+39 35 34 38
+
+#pillar2_right (red)
+2
+1
+36 32 35 39
+
+# PILLAR 3
+#pillar3_back (red)
+2
+1
+45 41 40 44
+
+#pillar3_left (red)
+2
+1
+46 42 41 45
+
+#pillar3_front (red)
+2
+1
+47 43 42 46
+
+#pillar3_right (red)
+2
+1
+44 40 43 47
+
+# PILLAR 4
+#pillar4_back (red)
+2
+1
+53 49 48 52
+
+#pillar4_left (red)
+2
+1
+54 50 49 53
+
+#pillar4_front (red)
+2
+1
+55 51 50 54
+
+#pillar4_right (red)
+2
+1
+52 48 51 55
+
+# PILLAR 5
+#pillar5_back (red)
+2
+1
+61 57 56 60
+
+#pillar5_left (red)
+2
+1
+62 58 57 61
+
+#pillar5_front (red)
+2
+1
+63 59 58 62
+
+#pillar5_right (red)
+2
+1
+60 56 59 63
+
+# PILLAR 6
+#pillar6_back (red)
+2
+1
+69 65 64 68
+
+#pillar6_left (red)
+2
+1
+70 66 65 69
+
+#pillar6_front (red)
+2
+1
+71 67 66 70
+
+#pillar6_right (red)
+2
+1
+68 64 67 71
+
+
+#End of file.

@@ -1,0 +1,23 @@
+#ifndef _RAYTRACE_H_
+#define _RAYTRACE_H_
+
+#include "Color.h"
+#include "Ray.h"
+#include "Scene.h"
+
+
+class Raytrace
+{
+public:
+
+	//////////////////////////////////////////////////////////////////////////////
+	// Traces a ray into the scene.
+	// reflectLevel: specfies number of levels of reflections (0 for no reflection).
+	// hasShadow: specifies whether to generate shadows.
+	//////////////////////////////////////////////////////////////////////////////
+
+	static Color TraceRay(const Ray &ray, const Scene &scene, int maxDepth, bool hasShadow);
+};
+
+
+#endif // _RAYTRACE_H_
